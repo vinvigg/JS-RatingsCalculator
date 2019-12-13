@@ -5,7 +5,7 @@ const collect_ratings = () => {
 
   const elements = document.querySelectorAll('.rating');
   elements.forEach(element => {
-    rating = paresInt(element.id.replace('star', ''));
+    rating = parseInt(element.id.replace('star', ''));
     ratings.count += paresInt(element.value);
     ratings.sum += paresInt(element.value) * rating;
   });
